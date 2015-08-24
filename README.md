@@ -54,7 +54,7 @@ It is very easy to use and feels realy like programming an Arduino.
     into your terminal.
     
     Now change into the WiPi-directory and enter:
-    $ TO BE CONTINUED ...
+    $ TO BE ADDED ...
     
     After installing the new library you are ready to use the functions in Perl.
 ```
