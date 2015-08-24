@@ -13,8 +13,8 @@ It is very easy to use and feels realy like programming an Arduino.
 
 
 
-- DESCRIPTION OF THE ACTUAL VERSION OF "WiPi":
-    
+####- Description of the actual version of "WiPi":
+```    
     The first version coming soon will provide the basic funktions like
     digital read or write a value to a GPIO-pin and write a PWM-value to a pin. 
     
@@ -26,11 +26,11 @@ It is very easy to use and feels realy like programming an Arduino.
     I will answere every posting that makes sense in my eyes, so please don't be upset 
     if I don't answere yours. Either it is a question I can't answere at the moment, or 
     it doesn't make sense to me! ;)
+```
 
 
-
-- TABLE OF AVAILIBLE FUNCTIONS:
-    
+####- Table of availible functions:
+```
     WiPi (Perl)               wiringPi.c (original library)       function
     wipi_setup()              wiringPiSetup(void)                 is necesary for initialising wiringPi
     digital_write(pin, val)   digitalWrite(int pin, int value)    sets the given pin high or low  
@@ -38,10 +38,10 @@ It is very easy to use and feels realy like programming an Arduino.
     digital_read(pin)         digitalRead(int pin)                reads the state of the given pin (returns 1 or 0)
     ...
     TO BE CONTINUED ...
-
+```
 
 - INSTALLATION GUIDE
-    
+```    
     To use the XS-file you have to install the WiringPi-library first. 
     
     To do so, go to the following link: 
@@ -57,13 +57,24 @@ It is very easy to use and feels realy like programming an Arduino.
     $ TO BE CONTINUED ...
     
     After installing the new library you are ready to use the functions in Perl.
+```
 
 
-
-THOUGHTS AND IMPORTANT
-
+#### - Toughts and important
+```
 - use of the I2C-Port of the Raspberry Pi
     To use RasPi's I2C-port you have to use either a I2C-device working at 3.3V or use a bidirectional level shifter.
     Any questions? Feel free to contact me ...
 
-- 
+```
+
+#### - ToDo
+~~add structure~~ `did it ;)` 
+write all availible functions into table `at it now`
+test basic funktions
+add I2C-library
+test I2C-library
+add software-PWM-funtions
+test pwm-functions
+add software-tone-functions
+test tone-functions
