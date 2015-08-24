@@ -50,11 +50,11 @@ It is very easy to use and feels realy like programming an Arduino.
     
     
     Afterwords you have to download the WiPi repository by
-    `$ TO BE ADDED ...`
+    $ TO BE ADDED ...
     in your terminal.
     
     Now change into the WiPi-directory and enter:
-    `$ TO BE ADDED ...`
+    $ TO BE ADDED ...
     
     After installing the new library you are ready to use the functions in Perl.
 ```
@@ -69,9 +69,9 @@ It is very easy to use and feels realy like programming an Arduino.
 ```
 
 ####- ToDo
-- ~~add structure~~ `did it ;)` 
-- write all availible functions into table `at it now`
-- test basic funktions
+- ~~add structure~~ `-> did it ;)` 
+- write all availible functions into table `-> in process`
+- test basic funktions `-> in process`
 - add I2C-library
 - test I2C-library
 - add software-PWM-funtions
