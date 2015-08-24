@@ -15,16 +15,21 @@ It is very easy to use and feels realy like programming an Arduino.
 
 ####- Description of the actual version of "WiPi":
 ```    
-    The first version coming soon will provide the basic funktions like
-    digital read or write a value to a GPIO-pin and write a PWM-value to a pin. 
+    The first version coming soon will provide the 
+    basic funktions like digital read or write a value 
+    to a GPIO-pin and write a PWM-value to a pin. 
     
-    For more information look at the table below to see the actual functions. 
+    For more information look at the table below where
+    you can dind the actual functions. 
     
-    The actual version is in a test status. I don't guarantee that it will work properly.
-    Of corse I am on testing and turning things arround that it will work.
-    If you recognise any errors or suggestions feel free to leave a comment.
-    I will answere every posting that makes sense in my eyes, so please don't be upset 
-    if I don't answere yours. Either it is a question I can't answere at the moment, or 
+    The actual version is in a test status. I don't 
+    guarantee that it will work properly.
+    Of corse I am on testing and turning things arround 
+    that it will work. SO if you recognise any errors or 
+    suggestions feel free to leave a comment.
+    I will answere every posting that makes sense in my 
+    eyes, so please don't be upset if I don't answere yours. 
+    Either it is a question I can't answere at the moment, or 
     it doesn't make sense to me! ;)
 ```
 
@@ -36,7 +41,7 @@ It is very easy to use and feels realy like programming an Arduino.
     digital_write(pin, val)   digitalWrite(int pin, int value)    sets the given pin high or low  
     pwm_write(pin, val)       pwmWrite(int pin, int value)        sets the given pin to a pwm-value from 0 to 255
     digital_read(pin)         digitalRead(int pin)                reads the state of the given pin (returns 1 or 0)
-    ...
+    
     TO BE CONTINUED ...
 ```
 
@@ -63,7 +68,8 @@ It is very easy to use and feels realy like programming an Arduino.
 ####- Toughts and important
 ```
 - use of the I2C-Port of the Raspberry Pi
-    To use RasPi's I2C-port you have to use either a I2C-device working at 3.3V or use a bidirectional level shifter.
+    To use RasPi's I2C-port you have to use either a I2C-device 
+    working at 3.3V or use a bidirectional level shifter.
     Any questions? Feel free to contact me ...
 
 ```
