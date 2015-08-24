@@ -40,7 +40,7 @@ It is very easy to use and feels realy like programming an Arduino.
     TO BE CONTINUED ...
 ```
 
-- INSTALLATION GUIDE
+####- Installation Guide
 ```    
     To use the XS-file you have to install the WiringPi-library first. 
     
@@ -60,7 +60,7 @@ It is very easy to use and feels realy like programming an Arduino.
 ```
 
 
-#### - Toughts and important
+####- Toughts and important
 ```
 - use of the I2C-Port of the Raspberry Pi
     To use RasPi's I2C-port you have to use either a I2C-device working at 3.3V or use a bidirectional level shifter.
@@ -68,13 +68,13 @@ It is very easy to use and feels realy like programming an Arduino.
 
 ```
 
-#### - ToDo
-~~add structure~~ `did it ;)` 
-write all availible functions into table `at it now`
-test basic funktions
-add I2C-library
-test I2C-library
-add software-PWM-funtions
-test pwm-functions
-add software-tone-functions
-test tone-functions
+####- ToDo
+- ~~add structure~~ `did it ;)` 
+- write all availible functions into table `at it now`
+- test basic funktions
+- add I2C-library
+- test I2C-library
+- add software-PWM-funtions
+- test pwm-functions
+- add software-tone-functions
+- test tone-functions
