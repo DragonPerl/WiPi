@@ -6,9 +6,9 @@ This works like a glue petween the Perl-skript and the C-library, means it trans
 Perls variables and parameters send to the C-code that C can do things with it and 
 translates the returned values back into "perlish", so that Perl can work with it.
 
-I wrote this XS-file to use the functions of the WiringPi Library, written by Drogon, in a Perl-Skript. 
+I wrote this XS-file to use the functions of the WiringPi Library, written by Gordon Henderson, in a Perl-Skript. 
 
-At this point I want to thank Drogon for this amazing library!!!
+At this point I want to thank Gordon for this amazing library!!!
 It is very easy to use and feels realy like programming an Arduino. 
 
 
