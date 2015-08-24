@@ -8,7 +8,7 @@ translates the returned values back into "perlish", so that Perl can work with i
 
 I wrote this XS-file to use the functions of the WiringPi Library, written by Drogon, in a Perl-Skript. 
 
-At this point I want to thank Drogan for this amazing library!!!
+At this point I want to thank Drogon for this amazing library!!!
 It is very easy to use and feels realy like programming an Arduino. 
 
 
