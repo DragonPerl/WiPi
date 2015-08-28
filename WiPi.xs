@@ -6,6 +6,7 @@
 #include "ppport.h"
 
 #include <wiringPi.h>
+#include <softPwm.h>
 
 MODULE = WiPi		PACKAGE = WiPi		
 
@@ -15,6 +16,15 @@ void
 setup_wipi()
     CODE:
         wiringPiSetup();
+
+
+# create PWM Output
+void
+create_pwm(pin, val)
+int pin
+int val
+    CODE: 
+        softPwmCreate(pin, val, 100);
 
 
 # set pinmode
@@ -32,7 +42,7 @@ pwm_write(pin, val)
 int pin
 int val
     CODE:
-        pwmWrite(pin, val); 
+        softPwmWrite(pin, val); 
 
 
 # write digital value to output-pin

@@ -15,8 +15,9 @@
 #include "ppport.h"
 
 #include <wiringPi.h>
+#include <softPwm.h>
 
-#line 20 "WiPi.c"
+#line 21 "WiPi.c"
 #ifndef PERL_UNUSED_VAR
 #  define PERL_UNUSED_VAR(var) if (0) var = var
 #endif
@@ -160,7 +161,7 @@ S_croak_xs_usage(const CV *const cv, const char *const params)
 #  define newXS_deffile(a,b) Perl_newXS_deffile(aTHX_ a,b)
 #endif
 
-#line 164 "WiPi.c"
+#line 165 "WiPi.c"
 
 XS_EUPXS(XS_WiPi_setup_wipi); /* prototype to pass -Wmissing-prototypes */
 XS_EUPXS(XS_WiPi_setup_wipi)
@@ -169,9 +170,28 @@ XS_EUPXS(XS_WiPi_setup_wipi)
     if (items != 0)
        croak_xs_usage(cv,  "");
     {
-#line 17 "WiPi.xs"
+#line 18 "WiPi.xs"
         wiringPiSetup();
-#line 175 "WiPi.c"
+#line 176 "WiPi.c"
+    }
+    XSRETURN_EMPTY;
+}
+
+
+XS_EUPXS(XS_WiPi_create_pwm); /* prototype to pass -Wmissing-prototypes */
+XS_EUPXS(XS_WiPi_create_pwm)
+{
+    dVAR; dXSARGS;
+    if (items != 2)
+       croak_xs_usage(cv,  "pin, val");
+    {
+	int	pin = (int)SvIV(ST(0))
+;
+	int	val = (int)SvIV(ST(1))
+;
+#line 27 "WiPi.xs"
+        softPwmCreate(pin, val, 100);
+#line 195 "WiPi.c"
     }
     XSRETURN_EMPTY;
 }
@@ -188,9 +208,9 @@ XS_EUPXS(XS_WiPi_pin_mode)
 ;
 	int	val = (int)SvIV(ST(1))
 ;
-#line 26 "WiPi.xs"
+#line 36 "WiPi.xs"
         pinMode(pin, val); 
-#line 194 "WiPi.c"
+#line 214 "WiPi.c"
     }
     XSRETURN_EMPTY;
 }
@@ -207,9 +227,9 @@ XS_EUPXS(XS_WiPi_pwm_write)
 ;
 	int	val = (int)SvIV(ST(1))
 ;
-#line 35 "WiPi.xs"
-        pwmWrite(pin, val); 
-#line 213 "WiPi.c"
+#line 45 "WiPi.xs"
+        softPwmWrite(pin, val); 
+#line 233 "WiPi.c"
     }
     XSRETURN_EMPTY;
 }
@@ -226,9 +246,9 @@ XS_EUPXS(XS_WiPi_digital_write)
 ;
 	int	val = (int)SvIV(ST(1))
 ;
-#line 44 "WiPi.xs"
+#line 54 "WiPi.xs"
         digitalWrite(pin, val);
-#line 232 "WiPi.c"
+#line 252 "WiPi.c"
     }
     XSRETURN_EMPTY;
 }
@@ -245,9 +265,9 @@ XS_EUPXS(XS_WiPi_digital_read)
 ;
 	int	RETVAL;
 	dXSTARG;
-#line 53 "WiPi.xs"
+#line 63 "WiPi.xs"
         RETVAL = digitalRead(pin);
-#line 251 "WiPi.c"
+#line 271 "WiPi.c"
 	XSprePUSH; PUSHi((IV)RETVAL);
     }
     XSRETURN(1);
@@ -263,9 +283,9 @@ XS_EUPXS(XS_WiPi_i2c_setup)
     {
 	int	dev = (int)SvIV(ST(0))
 ;
-#line 63 "WiPi.xs"
+#line 73 "WiPi.xs"
         wringPiI2CSetup(dev);
-#line 269 "WiPi.c"
+#line 289 "WiPi.c"
     }
     XSRETURN_EMPTY;
 }
@@ -282,9 +302,9 @@ XS_EUPXS(XS_WiPi_i2c_read)
 ;
 	int	RETVAL;
 	dXSTARG;
-#line 71 "WiPi.xs"
+#line 81 "WiPi.xs"
         RETVAL = wiringPiI2CRead(dev);
-#line 288 "WiPi.c"
+#line 308 "WiPi.c"
 	XSprePUSH; PUSHi((IV)RETVAL);
     }
     XSRETURN(1);
@@ -304,9 +324,9 @@ XS_EUPXS(XS_WiPi_i2c_read_reg8)
 ;
 	int	RETVAL;
 	dXSTARG;
-#line 82 "WiPi.xs"
+#line 92 "WiPi.xs"
         RETVAL = wiringPiI2CReadReg8(dev, regi);
-#line 310 "WiPi.c"
+#line 330 "WiPi.c"
 	XSprePUSH; PUSHi((IV)RETVAL);
     }
     XSRETURN(1);
@@ -326,9 +346,9 @@ XS_EUPXS(XS_WiPi_i2c_read_reg16)
 ;
 	int	RETVAL;
 	dXSTARG;
-#line 93 "WiPi.xs"
+#line 103 "WiPi.xs"
         RETVAL = wiringPiI2CReadReg16(dev, regi);
-#line 332 "WiPi.c"
+#line 352 "WiPi.c"
 	XSprePUSH; PUSHi((IV)RETVAL);
     }
     XSRETURN(1);
@@ -346,9 +366,9 @@ XS_EUPXS(XS_WiPi_i2c_write)
 ;
 	int	dat = (int)SvIV(ST(1))
 ;
-#line 104 "WiPi.xs"
+#line 114 "WiPi.xs"
         wiringPiI2CWrite(dev, dat);
-#line 352 "WiPi.c"
+#line 372 "WiPi.c"
     }
     XSRETURN_EMPTY;
 }
@@ -367,9 +387,9 @@ XS_EUPXS(XS_WiPi_i2c_write_reg8)
 ;
 	int	dat = (int)SvIV(ST(2))
 ;
-#line 114 "WiPi.xs"
+#line 124 "WiPi.xs"
         wiringPiI2CWriteReg8(dev, regi, dat);
-#line 373 "WiPi.c"
+#line 393 "WiPi.c"
     }
     XSRETURN_EMPTY;
 }
@@ -388,9 +408,9 @@ XS_EUPXS(XS_WiPi_i2c_write_reg16)
 ;
 	int	dat = (int)SvIV(ST(2))
 ;
-#line 124 "WiPi.xs"
+#line 134 "WiPi.xs"
         wiringPiI2CWriteReg16(dev, regi, dat);
-#line 394 "WiPi.c"
+#line 414 "WiPi.c"
     }
     XSRETURN_EMPTY;
 }
@@ -424,6 +444,7 @@ XS_EXTERNAL(boot_WiPi)
 #endif
 
         newXS_deffile("WiPi::setup_wipi", XS_WiPi_setup_wipi);
+        newXS_deffile("WiPi::create_pwm", XS_WiPi_create_pwm);
         newXS_deffile("WiPi::pin_mode", XS_WiPi_pin_mode);
         newXS_deffile("WiPi::pwm_write", XS_WiPi_pwm_write);
         newXS_deffile("WiPi::digital_write", XS_WiPi_digital_write);
