@@ -36,15 +36,15 @@ It is very easy to use and feels realy like programming an Arduino.
 
 ####- Table of availible functions:
 ```
-     in WiPi (Perl)         | in wiringPi.c (original library)  |  function
-    ========================|===================================|===================================================
-    wipi_setup()            | wiringPiSetup(void)               | is necessary for initialising wiringPi
-    ------------------------|-----------------------------------|---------------------------------------------------
-    digital_write(pin, val) | digitalWrite(int pin, int value)  | sets the given pin high or low      
-    ------------------------|-----------------------------------|---------------------------------------------------
-    pwm_write(pin, val)     | pwmWrite(int pin, int value)      | sets the given pin to a pwm-value from 0 to 255    
-    ------------------------|-----------------------------------|---------------------------------------------------
-    digital_read(pin)       | digitalRead(int pin)              | reads the state of the given pin (returns 1 or 0)
+   in WiPi (Perl)         | in wiringPi.c (original library)  |  function
+  ========================|===================================|===================================================
+  wipi_setup()            | wiringPiSetup(void)               | is necessary for initialising wiringPi
+  ------------------------|-----------------------------------|---------------------------------------------------
+  digital_write(pin, val) | digitalWrite(int pin, int value)  | sets the given pin high or low      
+  ------------------------|-----------------------------------|---------------------------------------------------
+  pwm_write(pin, val)     | pwmWrite(int pin, int value)      | sets the given pin to a pwm-value from 0 to 255    
+  ------------------------|-----------------------------------|---------------------------------------------------
+  digital_read(pin)       | digitalRead(int pin)              | reads the state of the given pin (returns 1 or 0)
     
     
 ```
