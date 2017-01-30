@@ -54,11 +54,16 @@ It is very easy to use and feels realy like programming an Arduino.
     There you can find a description on how to install it. 
     
     
-    Afterwords you have to download the WiPi repository by cloning the repository to your computer.
-    
-    Now change into the WiPi-directory and enter:
-    $ TO BE ADDED ...
-    
+    Afterwords you have to download the WiPi repository by cloning the repository to your computer.
+        $ cd     
+        $ git clone https://github.com/DragonPerl/WiPi
+    
+    To install this module (for Linux) type the following:
+       $ perl Makefile.PL
+       $ make
+       $ make test
+       $ make install
+    
     After installing the new library you are ready to use the functions in Perl.
 ```
 
