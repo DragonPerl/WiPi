@@ -20,15 +20,15 @@ It is very easy to use and feels realy like programming an Arduino.
     to a GPIO-pin and write a PWM-value to a pin. 
     
     For more information look at the table below where
-    you can dind the actual functions. 
+    you can find the actual functions. 
     
     The actual version is in a test status. I don't 
     guarantee that it will work properly.
     Of corse I am on testing and turning things arround 
-    that it will work. SO if you recognise any errors or 
+    that it will work. If you recognise any errors or 
     suggestions feel free to leave a comment.
-    I will answere every posting that makes sense in my 
-    eyes, so please don't be upset if I don't answere yours. 
+    I will answere every posting that makes sense to me, 
+    so please don't be upset if I don't answere yours. 
     Either it is a question I can't answere at the moment, or 
     it doesn't make sense to me! ;)
 ```
@@ -36,13 +36,17 @@ It is very easy to use and feels realy like programming an Arduino.
 
 ####- Table of availible functions:
 ```
-    WiPi (Perl)               wiringPi.c (original library)       function
-    wipi_setup()              wiringPiSetup(void)                 is necessary for initialising wiringPi
-    digital_write(pin, val)   digitalWrite(int pin, int value)    sets the given pin high or low  
-    pwm_write(pin, val)       pwmWrite(int pin, int value)        sets the given pin to a pwm-value from 0 to 255
-    digital_read(pin)         digitalRead(int pin)                reads the state of the given pin (returns 1 or 0)
+     in WiPi (Perl)         | in wiringPi.c (original library)  |  function
+    ========================|===================================|===================================================
+    wipi_setup()            | wiringPiSetup(void)               | is necessary for initialising wiringPi
+    ------------------------|-----------------------------------|---------------------------------------------------
+    digital_write(pin, val) | digitalWrite(int pin, int value)  | sets the given pin high or low      
+    ------------------------|-----------------------------------|---------------------------------------------------
+    pwm_write(pin, val)     | pwmWrite(int pin, int value)      | sets the given pin to a pwm-value from 0 to 255    
+    ------------------------|-----------------------------------|---------------------------------------------------
+    digital_read(pin)       | digitalRead(int pin)              | reads the state of the given pin (returns 1 or 0)
     
-    TO BE CONTINUED ...
+    
 ```
 
 ####- Installation Guide
@@ -52,8 +56,7 @@ It is very easy to use and feels realy like programming an Arduino.
     To do so, go to the following link: 
     http://wiringpi.com/download-and-install/
     There you can find a description on how to install it. 
-    
-    
+        
     Afterwords you have to download the WiPi repository by cloning the repository to your computer.
         $ cd     
         $ git clone https://github.com/DragonPerl/WiPi
