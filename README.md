@@ -37,7 +37,7 @@ It is very easy to use and feels realy like programming an Arduino.
 ####- Table of availible functions:
 ```
     WiPi (Perl)               wiringPi.c (original library)       function
-    wipi_setup()              wiringPiSetup(void)                 is necesary for initialising wiringPi
+    wipi_setup()              wiringPiSetup(void)                 is necessary for initialising wiringPi
     digital_write(pin, val)   digitalWrite(int pin, int value)    sets the given pin high or low  
     pwm_write(pin, val)       pwmWrite(int pin, int value)        sets the given pin to a pwm-value from 0 to 255
     digital_read(pin)         digitalRead(int pin)                reads the state of the given pin (returns 1 or 0)
@@ -54,9 +54,7 @@ It is very easy to use and feels realy like programming an Arduino.
     There you can find a description on how to install it. 
     
     
-    Afterwords you have to download the WiPi repository by
-    $ TO BE ADDED ...
-    in your terminal.
+    Afterwords you have to download the WiPi repository by cloning the repository to your computer.
     
     Now change into the WiPi-directory and enter:
     $ TO BE ADDED ...
@@ -76,9 +74,9 @@ It is very easy to use and feels realy like programming an Arduino.
 
 ####- ToDo
 - ~~add structure~~ `-> did it ;)` 
-- write all availible functions into table `-> in process`
-- test basic funktions `-> in process`
-- add I2C-library
+- ~~write all availible functions into table~~ `-> did it ;)`
+- ~~test basic funktions~~ `-> did it ;)`
+- add I2C-library `-> in process`
 - test I2C-library
 - add software-PWM-funtions
 - test pwm-functions
